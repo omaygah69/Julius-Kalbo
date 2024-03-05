@@ -2,8 +2,8 @@ package main
 
 import (
     "fmt"
-    "os"
-    "text/template"
+    // "os"
+    // "text/template"
     "net/http"
 )
 
@@ -13,13 +13,14 @@ type Note struct{
 }
 
 type User struct{
-    notes []Notes
+    notes []Note
     id string
     name string
 }
 
 func main(){
-    note Note{} 
+
+    // note []Note
     mux := http.NewServeMux()
 
     mux.HandleFunc("POST /notes", func(w http.ResponseWriter, r *http.Request){
